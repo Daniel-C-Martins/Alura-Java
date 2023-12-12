@@ -1,6 +1,6 @@
 package Curso2_AplicandoPOO;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
   protected String nome;
   protected int AnoDeLancamento;
   protected boolean incluidoNoPlano;
@@ -77,8 +77,15 @@ public class Titulo {
 
   @Override
   public String toString() {
-    return "Titulo [nome=" + nome + ", AnoDeLancamento=" + AnoDeLancamento + ", incluidoNoPlano=" + incluidoNoPlano
-        + ", somaDasAvaliacao=" + somaDasAvaliacao + ", totalDeAvaliacoes=" + totalDeAvaliacoes + ", duracaoEmMinutos="
+    return "Titulo: nome = " + nome + ", AnoDeLancamento = " + AnoDeLancamento + ", incluidoNoPlano  = "
+        + incluidoNoPlano
+        + ", somaDasAvaliacao =  " + somaDasAvaliacao + ", totalDeAvaliacoes = " + totalDeAvaliacoes
+        + ", duracaoEmMinutos = "
         + duracaoEmMinutos + "]";
+  }
+
+  @Override
+  public int compareTo(Titulo outroTitulo) {
+    return this.getNome().compareTo(outroTitulo.getNome());
   }
 }
