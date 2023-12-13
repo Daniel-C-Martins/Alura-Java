@@ -1,0 +1,3 @@
+Api é uma chamada de conteudo de outros sites e bibliotecas
+Java util é uma Api
+Chave de acesso: https://www.omdbapi.com/?i=tt3896198&apikey=6ab4e740
