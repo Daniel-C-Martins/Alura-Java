@@ -1,7 +1,6 @@
 package Curso4_ApiJava.screenmatch.calculos;
 
 public class FiltroRecomendacao {
-    private String recomendacao;
 
     public void filtra(Classificavel classificavel) {
         if (classificavel.getClassificacao() >= 4) {

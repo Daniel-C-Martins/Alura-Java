@@ -3,9 +3,9 @@ package Curso4_ApiJava.screenmatch.modelos;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo> {
-    @SerializedName("Title") //Anotação para como ta vindo o json
+    //@SerializedName("Title") //Anotação para como ta vindo o json
     private String nome;
-    @SerializedName ("Year")
+    //@SerializedName ("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
@@ -19,8 +19,11 @@ public class Titulo implements Comparable<Titulo> {
 
     public Titulo(TituloOmdb meuTitulooOmdb) {
         this.nome = meuTitulooOmdb.title();
+        if (meuTitulooOmdb.year().length() > 4){
+            throw new AnoInvalidoException("Ano com mais de 4 caracteres");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTitulooOmdb.year());
-        this. duracaoEmMinutos = Integer.valueOf(meuTitulooOmdb.runtime().substring(0, 2));
+        this.duracaoEmMinutos = Integer.valueOf(meuTitulooOmdb.runtime().substring(0, 2));
     }
 
     public String getNome() {
@@ -80,6 +83,6 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return "nome    =   " + nome + ", anoDeLancamento  =   " + anoDeLancamento + "duração = " + duracaoEmMinutos;
+        return "(nome do filme =   " + nome + ", ano De Lançamento =   " + anoDeLancamento + ", duração = " + duracaoEmMinutos + ") \n";
     }
 }
