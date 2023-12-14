@@ -1,7 +1,5 @@
 package Curso4_ApiJava.screenmatch.modelos;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Titulo implements Comparable<Titulo> {
     //@SerializedName("Title") //Anotação para como ta vindo o json
     private String nome;

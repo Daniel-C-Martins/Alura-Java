@@ -12,4 +12,12 @@ public class Pessoa {
   public void ola() {
     System.out.println("Olá mundo");
   }
+
+  public String getNome() {
+    return nome;
+  }
+
+  public int getIdade() {
+    return idade;
+  }
 }

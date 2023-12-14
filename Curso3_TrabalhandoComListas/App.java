@@ -1,6 +1,5 @@
 package Curso3_TrabalhandoComListas;
 
-import java.io.File;
 import java.util.ArrayList;
 
 import Curso2_AplicandoPOO.Filme;
@@ -23,8 +22,7 @@ public class App {
     FiltroRecomendacao filtro = new FiltroRecomendacao();
     filtro.flitra(filme1);
 
-    // Var
-    var numeroTeste = 10; // Var setta um tipo automaticamente pra varivel vom base no valor inicial
+    // Var setta um tipo automaticamente pra varivel vom base no valor inicial
 
     Filme filme2 = new Filme("Interestelar", 2014, true, 0, 0, 150, "Eu dnv");
     var filme3 = new Filme("Vingadores", 2012, false, 0, 0, 0, "Não fui eu");
@@ -46,14 +44,13 @@ public class App {
     listaTitulos.add(filme2);
     listaTitulos.add(filme3);
     listaTitulos.add(serie1);
-    
+
     for (Titulo t : listaTitulos) {
-      if(t instanceof Filme){
+      if (t instanceof Filme) {
         System.out.println(t.getNome() + "É um filme  ");
-      }else{
+      } else {
         System.out.println(t.getNome() + "É uma série");
       }
     }
-
   }
 }

@@ -91,6 +91,6 @@ public class DesafioFinal {
           break;
       }
     }
-
+    key.close();
   }
 }

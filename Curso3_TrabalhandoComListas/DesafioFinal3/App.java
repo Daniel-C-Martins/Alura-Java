@@ -37,5 +37,6 @@ public class App {
     }
     Collections.sort(listaCompras);
     System.out.println("Aqui está sua lista de compras:" + listaCompras);
+    key.close();
   }
 }

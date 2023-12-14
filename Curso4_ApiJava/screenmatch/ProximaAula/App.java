@@ -91,5 +91,6 @@ public class App {
 
     System.out.println("------------------------------------------------");
     System.out.println("Fim do programa");
+    key.close();
   }
 }

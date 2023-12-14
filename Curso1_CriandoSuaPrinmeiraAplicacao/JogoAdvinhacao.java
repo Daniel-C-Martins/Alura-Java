@@ -22,6 +22,6 @@ public class JogoAdvinhacao {
 
     System.out
         .println(String.format("O número era: %d, o total de tentaivas foi: %d ", resposta, contadorDeTentativas));
-
+    key.close();
   }
 }

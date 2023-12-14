@@ -17,7 +17,7 @@ public class App {
   static Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).setPrettyPrinting()
       .create();
 
-  public static void main(String[] args) throws CepInvalidoException, InterruptedException {
+  public static void main(String[] args) {
 
     System.out.println("Digite o cep que deseja consultar: ");
     var cep = key.nextLine();
